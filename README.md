@@ -1,3 +1,3 @@
 # GTA 6 Repository Test
 
-![](wallpaper.png)
+![](poster.png)
