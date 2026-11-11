@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'GTAArtDeco';
+    src: url('GTAArtDeco-Bold.eot');
+    src: url('GTAArtDeco-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GTAArtDeco-Bold.woff2') format('woff2'),
+        url('GTAArtDeco-Bold.woff') format('woff'),
+        url('GTAArtDeco-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GTAArtDeco Condensed';
+    src: url('GTAArtDeco-CondensedBold.eot');
+    src: url('GTAArtDeco-CondensedBold.eot?#iefix') format('embedded-opentype'),
+        url('GTAArtDeco-CondensedBold.woff2') format('woff2'),
+        url('GTAArtDeco-CondensedBold.woff') format('woff'),
+        url('GTAArtDeco-CondensedBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GTAArtDeco Condensed';
+    src: url('GTAArtDeco-CondensedHeavy.eot');
+    src: url('GTAArtDeco-CondensedHeavy.eot?#iefix') format('embedded-opentype'),
+        url('GTAArtDeco-CondensedHeavy.woff2') format('woff2'),
+        url('GTAArtDeco-CondensedHeavy.woff') format('woff'),
+        url('GTAArtDeco-CondensedHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GTAArtDeco';
+    src: url('GTAArtDeco-Medium.eot');
+    src: url('GTAArtDeco-Medium.eot?#iefix') format('embedded-opentype'),
+        url('GTAArtDeco-Medium.woff2') format('woff2'),
+        url('GTAArtDeco-Medium.woff') format('woff'),
+        url('GTAArtDeco-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GTAArtDeco';
+    src: url('GTAArtDeco-Regular.eot');
+    src: url('GTAArtDeco-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GTAArtDeco-Regular.woff2') format('woff2'),
+        url('GTAArtDeco-Regular.woff') format('woff'),
+        url('GTAArtDeco-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
