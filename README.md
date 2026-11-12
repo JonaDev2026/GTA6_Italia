@@ -1,5 +1,6 @@
 # GTA 6 Repository Test
 
+![](youtube/yt_cover2.png)
 ![](poster.png)
 ![](poster2.png)
 ![](poster3.png)
