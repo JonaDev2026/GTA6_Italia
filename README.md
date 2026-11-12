@@ -12,5 +12,5 @@
 ![](poster7.png)
 ![](poster8.png)
 ![](poster9.png)
-![](phone_version/wallpaper-1.png)
+![](phone version/wallpaper-1.png)
 
