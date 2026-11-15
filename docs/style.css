@@ -27,6 +27,10 @@
     .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
     .kicker{color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
     h2{font:900 clamp(44px,7vw,82px)/.9 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:0;color:#fff9cb}
+    .universe-link{display:inline-block;margin-bottom:12px;transition:color .2s}
+    .universe-link:hover{color:#ffdf80}
+    h2.universe-title{font:900 clamp(44px,7vw,82px)/.98 "GTAArtDeco",Arial,sans-serif;letter-spacing:-.045em;color:#f7f5f5}
+    h2.universe-title span{background:linear-gradient(100deg,#ff9b75 0%,#f45c9b 58%,#d77ce9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
     .section-intro{max-width:390px;color:#fff;font-size:14px;line-height:1.8;margin:0}
     .feature{display:grid;grid-template-columns:1.1fr .9fr;min-height:510px;background:#21213c}
     .feature-image{min-height:420px;background:url("https://www.rockstargames.com/VI/_next/static/media/desktop.00.5pzu2sm-z4.jpg?akim=1&imdensity=1&imwidth=1536") center/cover no-repeat}
