@@ -2,6 +2,7 @@
 
 ## Maps
 ![](collection_map_A.jpg)
+![](collection_map_B.jpg)
 ![](map.jpeg)
 
 ## wallpapers
