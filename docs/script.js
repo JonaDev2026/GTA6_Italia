@@ -49,4 +49,35 @@
       postsFeed.addEventListener('scroll', setActivePost, {passive: true});
       window.addEventListener('resize', setActivePost);
       setActivePost();
+
+      let autoplayTimer;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const startAutoplay = () => {
+        if (autoplayTimer || reducedMotion.matches || document.hidden) return;
+        autoplayTimer = window.setInterval(() => {
+          const currentIndex = postDots.findIndex(dot => dot.classList.contains('active'));
+          const nextIndex = (currentIndex + 1) % postCards.length;
+          postCards[nextIndex].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+        }, 5000);
+      };
+      const stopAutoplay = () => {
+        window.clearInterval(autoplayTimer);
+        autoplayTimer = undefined;
+      };
+
+      postsFeed.addEventListener('pointerenter', stopAutoplay);
+      postsFeed.addEventListener('pointerleave', startAutoplay);
+      postsFeed.addEventListener('focusin', stopAutoplay);
+      postsFeed.addEventListener('focusout', event => {
+        if (!postsFeed.contains(event.relatedTarget)) startAutoplay();
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopAutoplay();
+        else startAutoplay();
+      });
+      reducedMotion.addEventListener?.('change', () => {
+        if (reducedMotion.matches) stopAutoplay();
+        else startAutoplay();
+      });
+      startAutoplay();
     }
