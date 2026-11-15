@@ -41,7 +41,7 @@
     .text-link:after{content:"↗";font-size:14px}
     #posts .section-head .kicker{color:var(--orange)}
     #posts .section-head h2{color:#ffa2ce}
-    .posts{background:#151528}
+    .posts{background:#1f042d}
     .vice-talk{background:#71426c}
     .vice-talk .feature{grid-template-columns:.9fr 1.1fr;background:#794978}
     .vice-talk-player{min-height:420px;overflow:hidden;background:#111}
