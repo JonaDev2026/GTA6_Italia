@@ -45,8 +45,14 @@
     .vice-talk .feature{grid-template-columns:.9fr 1.1fr;background:#794978}
     .vice-talk-player{min-height:420px;overflow:hidden;background:#111}
     .vice-talk-player iframe{display:block;width:100%;height:100%;min-height:420px;border:0}
-    .posts-feed{width:min(780px,100%);margin:0 auto;display:grid;gap:24px}
-    .post-card{overflow:hidden;background:#21213c;border:0;border-radius:14px}
+    .posts-carousel{width:min(780px,100%);margin:0 auto}
+    .posts-feed{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;-ms-overflow-style:none}
+    .posts-feed::-webkit-scrollbar{display:none}
+    .post-card{display:block;flex:0 0 100%;min-width:0;overflow:hidden;scroll-snap-align:start;scroll-snap-stop:always;background:#21213c;border:0;border-radius:14px}
+    .posts-dots{display:flex;justify-content:center;align-items:center;gap:10px;padding-top:22px}
+    .posts-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#77738c;opacity:.65;cursor:pointer;transition:width .2s,background .2s,opacity .2s}
+    .posts-dot.active{width:22px;border-radius:8px;background:var(--pink);opacity:1}
+    .posts-dot:focus-visible{outline:2px solid #ffdf80;outline-offset:4px}
     .post-head{display:flex;align-items:center;gap:13px;padding:19px 22px}
     .post-avatar{width:42px;height:42px;object-fit:contain;background:#21213c;border:1px solid #ffffff22;padding:5px}
     .post-author{font-size:12px;font-weight:700;letter-spacing:.08em}
