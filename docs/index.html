@@ -45,13 +45,20 @@
     .feature-copy p{color:var(--muted);font-size:13px;line-height:1.9;max-width:420px}
     .text-link{display:inline-flex;gap:14px;align-items:center;margin-top:18px;color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
     .text-link:after{content:"↗";font-size:16px}
-    .gallery{background:#111014}
-    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .shot{position:relative;overflow:hidden;aspect-ratio:4/5;background:#242024}
-    .shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1);filter:saturate(.88)}
-    .shot:hover img{transform:scale(1.06);filter:saturate(1.1)}
-    .shot:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#0008);pointer-events:none}
-    .shot span{position:absolute;z-index:1;left:18px;bottom:16px;font:700 22px "GTAArtDeco Condensed";text-transform:uppercase}
+    .posts{background:#111014}
+    .posts-feed{width:min(780px,100%);margin:0 auto;display:grid;gap:24px}
+    .post-card{overflow:hidden;background:#19171b;border:1px solid rgba(255,255,255,.11)}
+    .post-head{display:flex;align-items:center;gap:13px;padding:19px 22px}
+    .post-avatar{width:42px;height:42px;object-fit:contain;background:#09090b;border:1px solid #ffffff22;padding:5px}
+    .post-author{font-size:12px;font-weight:700;letter-spacing:.08em}
+    .post-meta{margin-top:4px;color:#918a91;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    .post-tag{margin-left:auto;color:var(--pink);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .post-image{width:100%;height:auto;max-height:680px;object-fit:cover;background:#09090b}
+    .post-body{padding:22px 24px 24px}
+    .post-body h3{font:900 clamp(26px,4vw,38px)/.95 "GTAArtDeco Condensed";text-transform:uppercase;margin:0 0 10px}
+    .post-body p{color:#b9b1b7;font-size:13px;line-height:1.8;margin:0}
+    .post-footer{display:flex;gap:12px;align-items:center;padding:14px 24px;border-top:1px solid #ffffff12;color:#a49ba2;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .post-footer span:first-child{color:var(--pink)}
     .community{position:relative;overflow:hidden;padding:120px 24px;text-align:center;background:linear-gradient(110deg,#26131e,#151019 55%,#1d1422)}
     .community:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:#f35b9b20;filter:blur(100px);top:-350px;left:calc(50% - 300px)}
     .community .wrap{position:relative}
@@ -60,7 +67,7 @@
     footer{padding:32px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#8e888d;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
     footer img{width:105px;max-height:40px;object-fit:contain;opacity:.8}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:760px){.topbar{height:68px}.brand img{width:120px}.menu{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;padding:22px;background:#09090bf5;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav.open{display:flex}.hero{height:780px;min-height:760px;background-position:58% center}.hero-content{padding:130px 24px 100px}.hero:before{background:linear-gradient(90deg,#050508b8,transparent),linear-gradient(0deg,#09090b,transparent 70%)}.section{padding:78px 20px}.section-head{display:block}.section-intro{margin-top:20px}.feature{grid-template-columns:1fr}.feature-image{min-height:330px}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}.shot{aspect-ratio:3/4}.community{padding:90px 22px}footer{flex-direction:column;text-align:center}}
+    @media(max-width:760px){.topbar{height:68px}.brand img{width:120px}.menu{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;padding:22px;background:#09090bf5;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav.open{display:flex}.hero{height:780px;min-height:760px;background-position:58% center}.hero-content{padding:130px 24px 100px}.hero:before{background:linear-gradient(90deg,#050508b8,transparent),linear-gradient(0deg,#09090b,transparent 70%)}.section{padding:78px 20px}.section-head{display:block}.section-intro{margin-top:20px}.feature{grid-template-columns:1fr}.feature-image{min-height:330px}.posts-feed{gap:16px}.post-head{padding:16px}.post-body{padding:18px}.post-footer{padding:13px 18px}.community{padding:90px 22px}footer{flex-direction:column;text-align:center}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.reveal{opacity:1;transform:none}}
   </style>
 </head>
@@ -69,7 +76,7 @@
     <a class="brand" href="#inizio" aria-label="GTA6ITALIA home"><img src="../logo.png" alt="GTA6ITALIA"></a>
     <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">MENU ☰</button>
     <nav class="nav" id="nav">
-      <a href="#universo">Universo</a><a href="#galleria">Galleria</a><a href="#community">Community</a>
+      <a href="#universo">Universo</a><a href="#posts">Post</a><a href="#community">Community</a>
     </nav>
   </header>
 
@@ -79,7 +86,7 @@
         <div class="eyebrow">La community italiana</div>
         <h1>Benvenuti<span>a Leonida</span></h1>
         <p class="hero-copy">Vice City, nuove storie e un mondo tutto da scoprire. Entra nell'universo di Grand Theft Auto VI insieme alla community italiana.</p>
-        <div class="hero-actions"><a class="button primary" href="#universo">Scopri GTA VI</a><a class="button" href="#galleria">Esplora la galleria</a></div>
+        <div class="hero-actions"><a class="button primary" href="#universo">Scopri GTA VI</a><a class="button" href="#posts">Scopri i post</a></div>
       </div>
       <div class="hero-index">GTA6ITALIA&nbsp; / &nbsp;01 — LEONIDA</div>
     </section>
@@ -92,25 +99,27 @@
         </div>
         <div class="feature reveal">
           <div class="feature-image" role="img" aria-label="Artwork di Grand Theft Auto VI"></div>
-          <div class="feature-copy"><div class="kicker">Grand Theft Auto VI</div><h3>La notte<br>è appena<br>iniziata.</h3><p>Scopri l'atmosfera di Vice City e i paesaggi dello stato di Leonida attraverso una selezione di artwork e immagini del gioco.</p><a class="text-link" href="#galleria">Vai alla galleria</a></div>
+          <div class="feature-copy"><div class="kicker">Grand Theft Auto VI</div><h3>La notte<br>è appena<br>iniziata.</h3><p>Scopri l'atmosfera di Vice City e i paesaggi dello stato di Leonida attraverso una selezione di artwork e immagini del gioco.</p><a class="text-link" href="#posts">Scopri i post</a></div>
         </div>
       </div>
     </section>
 
-    <section class="section gallery" id="galleria">
+    <section class="section posts" id="posts">
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="kicker">Dentro Leonida</div><h2>Galleria</h2></div><p class="section-intro">Una raccolta visiva dedicata a personaggi, luoghi e atmosfere di GTA VI.</p></div>
-        <div class="gallery-grid">
-          <a class="shot reveal" href="../poster2.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster2.png" alt="Artwork GTA VI 1"><span>Vice City</span></a>
-          <a class="shot reveal" href="../poster3.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster3.png" alt="Artwork GTA VI 2"><span>Leonida</span></a>
-          <a class="shot reveal" href="../poster4.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster4.png" alt="Artwork GTA VI 3"><span>La strada</span></a>
-          <a class="shot reveal" href="../poster5.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster5.png" alt="Artwork GTA VI 4"><span>Nightlife</span></a>
-          <a class="shot reveal" href="../poster6.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster6.png" alt="Artwork GTA VI 5"><span>Personaggi</span></a>
-          <a class="shot reveal" href="../poster7.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster7.png" alt="Artwork GTA VI 6"><span>Atmosfere</span></a>
-          <a class="shot reveal" href="../poster8.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster8.png" alt="Artwork GTA VI 7"><span>Florida</span></a>
-          <a class="shot reveal" href="../poster9.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster9.png" alt="Artwork GTA VI 8"><span>GTA VI</span></a>
-          <a class="shot reveal" href="../poster10.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster10.png" alt="Artwork GTA VI 9"><span>Leonida by night</span></a>
-          <a class="shot reveal" href="../poster11.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster11.png" alt="Artwork GTA VI 10"><span>Vice Stories</span></a>
+        <div class="section-head reveal"><div><div class="kicker">Dalla community</div><h2>Ultimi post</h2></div><p class="section-intro">Immagini, aggiornamenti e contenuti dedicati a Grand Theft Auto VI, raccolti nel feed di GTA6ITALIA.</p></div>
+        <div class="posts-feed">
+          <article class="post-card reveal">
+            <div class="post-head"><img class="post-avatar" src="../logo.png" alt=""><div><div class="post-author">GTA6ITALIA</div><div class="post-meta">Community · Grand Theft Auto VI</div></div><span class="post-tag">In evidenza</span></div>
+            <img class="post-image" loading="lazy" src="../post_example.png" alt="Post della community GTA6ITALIA">
+            <div class="post-body"><h3>Benvenuti a Leonida</h3><p>Vice City ci aspetta. Segui GTA6ITALIA per scoprire immagini, curiosità e novità dedicate a Grand Theft Auto VI.</p></div>
+            <div class="post-footer"><span>GTA VI</span><span>·</span><span>Vice City, Leonida</span></div>
+          </article>
+          <article class="post-card reveal">
+            <div class="post-head"><img class="post-avatar" src="../logo.png" alt=""><div><div class="post-author">GTA6ITALIA</div><div class="post-meta">Community · Dentro Leonida</div></div><span class="post-tag">Community</span></div>
+            <img class="post-image" loading="lazy" src="../post_example2.png" alt="Secondo post della community GTA6ITALIA">
+            <div class="post-body"><h3>Il mondo di GTA VI</h3><p>Un nuovo sguardo all'universo di Leonida: paesaggi, atmosfere e storie da vivere. La community italiana è qui.</p></div>
+            <div class="post-footer"><span>GTA6ITALIA</span><span>·</span><span>La community italiana</span></div>
+          </article>
         </div>
       </div>
     </section>
