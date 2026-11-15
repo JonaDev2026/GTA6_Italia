@@ -65,6 +65,7 @@
     .social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
     .social-links .button{min-height:0;padding:10px;border:0;border-radius:0;background:transparent;color:#ccc2f5;font-size:0;letter-spacing:0;gap:0;transition:color .2s,transform .2s}
     .social-links .button:hover{background:transparent;border-color:transparent;color:#ffdf80;transform:translateY(-3px)}
+    .social-links .twitch-link{color:#ad59e7}
     .social-icon{width:25px;height:25px;flex:none;display:inline-flex;align-items:center;justify-content:center;font-size:25px;line-height:1}
     footer .footer-socials{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
     footer .footer-socials a{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border-radius:6px;background:#2f2e52;color:#ccc2f5;transition:background .2s,color .2s}
