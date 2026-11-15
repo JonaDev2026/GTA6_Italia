@@ -40,10 +40,17 @@
         });
       };
 
-      postDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          postCards[index]?.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+      const goToPost = index => {
+        const card = postCards[index];
+        if (!card) return;
+        postsFeed.scrollTo({
+          left: card.offsetLeft - postCards[0].offsetLeft,
+          behavior: 'smooth'
         });
+      };
+
+      postDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToPost(index));
       });
 
       postsFeed.addEventListener('scroll', setActivePost, {passive: true});
@@ -57,7 +64,7 @@
         autoplayTimer = window.setInterval(() => {
           const currentIndex = postDots.findIndex(dot => dot.classList.contains('active'));
           const nextIndex = (currentIndex + 1) % postCards.length;
-          postCards[nextIndex].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+          goToPost(nextIndex);
         }, 5000);
       };
       const stopAutoplay = () => {
