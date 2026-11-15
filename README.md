@@ -2,6 +2,7 @@
 
 ## social post example
 ![](post_example.png)
+![](post_example2.png)
 
 ## wallpapers
 ![](wallpapers/wallpapers-1.png)
