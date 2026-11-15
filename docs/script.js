@@ -17,3 +17,36 @@
       });
     }, {threshold: .12});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const postsFeed = document.querySelector('.posts-feed');
+    const postCards = postsFeed ? [...postsFeed.querySelectorAll('.post-card')] : [];
+    const postDots = [...document.querySelectorAll('.posts-dot')];
+
+    if (postsFeed && postCards.length && postDots.length) {
+      const setActivePost = () => {
+        let activeIndex = 0;
+        let nearestDistance = Infinity;
+        postCards.forEach((card, index) => {
+          const distance = Math.abs(card.offsetLeft - postsFeed.scrollLeft);
+          if (distance < nearestDistance) {
+            nearestDistance = distance;
+            activeIndex = index;
+          }
+        });
+        postDots.forEach((dot, index) => {
+          const active = index === activeIndex;
+          dot.classList.toggle('active', active);
+          dot.setAttribute('aria-current', String(active));
+        });
+      };
+
+      postDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          postCards[index]?.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start'});
+        });
+      });
+
+      postsFeed.addEventListener('scroll', setActivePost, {passive: true});
+      window.addEventListener('resize', setActivePost);
+      setActivePost();
+    }
