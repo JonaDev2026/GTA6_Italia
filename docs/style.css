@@ -1,0 +1,71 @@
+    :root{--ink:#151528;--paper:#f5f0e9;--pink:#e75995;--orange:#ff9b59;--muted:#aaa5a5;--line:rgba(255,255,255,.15);--wide:1280px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ink);color:var(--paper);font-family:"GTAArtDeco",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .topbar{height:78px;position:absolute;z-index:5;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,76px);border-bottom:1px solid var(--line);background:linear-gradient(#08080acc,transparent)}
+    .brand img{width:148px;max-height:54px;object-fit:contain}
+    .nav{display:flex;align-items:center;gap:clamp(18px,3vw,42px);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .nav a{opacity:.82;transition:color .2s,opacity .2s}.nav a:hover{color:var(--pink);opacity:1}
+    .menu{display:none;border:1px solid var(--line);background:#111;color:white;padding:10px 13px;font:700 11px "GTAArtDeco";letter-spacing:.12em}
+    .hero{min-height:min(900px,100svh);height:850px;max-height:1000px;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:#191316 url("https://www.rockstargames.com/VI/_next/static/media/outro.0e9ko9mexi~1m.jpg?akim=1&imdensity=1&imwidth=2048") center 38%/cover no-repeat}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,8,.20),rgba(5,5,8,.03) 72%),linear-gradient(0deg,rgba(9,9,11,.18) 0%,transparent 48%),linear-gradient(180deg,rgba(0,0,0,.08),transparent 28%)}
+    .hero-content{position:relative;width:min(var(--wide),100%);margin:0 auto;padding:150px 34px 105px}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:#ffd2df;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:34px;height:1px;background:var(--pink)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font:900 clamp(76px,13vw,174px)/.78 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.045em;text-transform:uppercase;margin:28px 0 24px;max-width:850px;text-shadow:0 8px 45px #0008}
+    h1 span{display:block;color:var(--pink);font-size:.56em;letter-spacing:.02em;margin-top:16px}
+    .hero-copy{max-width:470px;color:#e0d9d7;font-size:14px;line-height:1.8}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 23px;border:1px solid rgba(255,255,255,.5);border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:.2s}
+    .button.primary{background:var(--pink);border-color:var(--pink);color:#170b10}.button:hover{transform:translateY(-3px);background:#ffdf80;border-color:#ffdf80;color:#151528}
+    .hero-index{position:absolute;right:clamp(20px,5vw,76px);bottom:42px;color:#ffffff9c;font-size:10px;letter-spacing:.2em}
+    .section{padding:110px 24px}
+    .wrap{width:min(var(--wide),100%);margin:auto}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
+    .kicker{color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
+    h2{font:900 clamp(44px,7vw,82px)/.9 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:0;color:#fff9cb}
+    .section-intro{max-width:390px;color:#fff;font-size:14px;line-height:1.8;margin:0}
+    .feature{display:grid;grid-template-columns:1.1fr .9fr;min-height:510px;background:#21213c}
+    .feature-image{min-height:420px;background:url("https://www.rockstargames.com/VI/_next/static/media/desktop.00.5pzu2sm-z4.jpg?akim=1&imdensity=1&imwidth=1536") center/cover no-repeat}
+    .feature-copy{padding:clamp(30px,5vw,70px);display:flex;flex-direction:column;justify-content:center}
+    .feature-copy h3{font:900 clamp(42px,6vw,72px)/.9 "GTAArtDeco Condensed";text-transform:uppercase;margin:16px 0;color:#fff}
+    .feature-copy p{color:#fff;font-size:14px;line-height:1.9;max-width:420px}
+    .text-link{display:inline-flex;gap:14px;align-items:center;margin-top:18px;color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .text-link:after{content:"↗";font-size:16px}
+    #posts .section-head h2{color:#d1ffcb}
+    .posts{background:#151528}
+    .posts-feed{width:min(780px,100%);margin:0 auto;display:grid;gap:24px}
+    .post-card{overflow:hidden;background:#21213c;border:0;border-radius:14px}
+    .post-head{display:flex;align-items:center;gap:13px;padding:19px 22px}
+    .post-avatar{width:42px;height:42px;object-fit:contain;background:#21213c;border:1px solid #ffffff22;padding:5px}
+    .post-author{font-size:12px;font-weight:700;letter-spacing:.08em}
+    .post-meta{margin-top:4px;color:#918a91;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    .post-tag{margin-left:auto;color:var(--pink);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .post-image{display:block;width:100%;height:520px;max-height:none;object-fit:cover;object-position:center;background:#21213c}
+    .post-body{padding:22px 24px 24px}
+    .post-body h3{font:900 clamp(26px,4vw,38px)/.95 "GTAArtDeco Condensed";text-transform:uppercase;margin:0 0 10px}
+    .post-body p{color:#fff;font-size:14px;line-height:1.8;margin:0}
+    .post-footer{display:flex;gap:12px;align-items:center;padding:14px 24px;border-top:1px solid #ffffff12;color:#a49ba2;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .post-footer span:first-child{color:var(--pink)}
+    .community{position:relative;overflow:hidden;padding:120px 24px;text-align:center;background:linear-gradient(110deg,#26131e,#151019 55%,#1d1422)}
+    .community:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:#f35b9b20;filter:blur(100px);top:-350px;left:calc(50% - 300px)}
+    .community .wrap{position:relative}
+    .community-emblem{width:104px;height:auto;max-height:104px;object-fit:contain;margin:0 auto 22px}
+    .social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .social-links .button{gap:10px;border-color:rgba(204,194,245,.45);color:#ccc2f5}
+    .social-links .button:hover{background:#ccc2f5;border-color:#ccc2f5;color:#151528}
+    .social-icon{width:17px;height:17px;flex:none;display:inline-flex;align-items:center;justify-content:center;font-size:17px;line-height:1}
+    footer .footer-socials{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+    footer .footer-socials a{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border-radius:6px;background:#2f2e52;color:#ccc2f5;transition:background .2s,color .2s}
+    footer .footer-socials a:hover{background:#e75995;color:#151528}
+    footer .social-icon{width:15px;height:15px;font-size:15px}
+    .community h2{font-size:clamp(54px,9vw,112px);max-width:900px;margin:0 auto 24px;background:radial-gradient(62.79% 100% at 50% 0%, #ffdf80 0%, #f4717c 50%, #e963c7 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .community p{max-width:520px;margin:0 auto;color:#fff;font-size:14px;line-height:1.9}
+    footer{padding:32px 24px 0;background:transparent;border-top:0;display:flex;justify-content:space-between;gap:20px;align-items:center;color:#fff;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    footer img{width:105px;max-height:40px;object-fit:contain;opacity:.8}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:760px){.topbar{height:68px}.brand img{width:120px}.menu{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;padding:22px;background:#09090bf5;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav.open{display:flex}.hero{height:780px;min-height:760px;background-position:58% center}.hero-content{padding:130px 24px 100px}.hero:before{background:linear-gradient(90deg,#050508b8,transparent),linear-gradient(0deg,#09090b,transparent 70%)}.section{padding:78px 20px}.section-head{display:block}.section-intro{margin-top:20px}.feature{grid-template-columns:1fr}.feature-image{min-height:330px}.posts-feed{gap:16px}.post-head{padding:16px}.post-body{padding:18px}.post-footer{padding:13px 18px}.community{padding:90px 22px}footer{flex-direction:column;text-align:center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.reveal{opacity:1;transform:none}}
