@@ -37,8 +37,8 @@
     .feature-copy{padding:clamp(30px,5vw,70px);display:flex;flex-direction:column;justify-content:center}
     .feature-copy h3{font:900 clamp(42px,6vw,72px)/.9 "GTAArtDeco Condensed";text-transform:uppercase;margin:16px 0;color:#fff}
     .feature-copy p{color:#fff;font-size:14px;line-height:1.9;max-width:420px}
-    .text-link{display:inline-flex;gap:14px;align-items:center;margin-top:18px;color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-    .text-link:after{content:"↗";font-size:16px}
+    .text-link{display:inline-flex;gap:14px;align-items:center;margin-top:18px;color:var(--pink);font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .text-link:after{content:"↗";font-size:14px}
     #posts .section-head h2{color:#d1ffcb}
     .posts{background:#151528}
     .vice-talk{background:#71426c}
@@ -65,7 +65,8 @@
     .social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
     .social-links .button{min-height:0;padding:10px;border:0;border-radius:0;background:transparent;color:#ccc2f5;font-size:0;letter-spacing:0;gap:0;transition:color .2s,transform .2s}
     .social-links .button:hover{background:transparent;border-color:transparent;color:#ffdf80;transform:translateY(-3px)}
-    .vice-talk .vice-twitch-link{color:#ad59e7}
+    .vice-talk .vice-youtube-link{color:#ffd4a8}
+    .vice-talk .vice-twitch-link{color:#c98ef2}
     .social-icon{width:25px;height:25px;flex:none;display:inline-flex;align-items:center;justify-content:center;font-size:25px;line-height:1}
     footer .footer-socials{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
     footer .footer-socials a{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border-radius:6px;background:#2f2e52;color:#ccc2f5;transition:background .2s,color .2s}
