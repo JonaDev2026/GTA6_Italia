@@ -63,11 +63,14 @@
     .community:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:#f35b9b20;filter:blur(100px);top:-350px;left:calc(50% - 300px)}
     .community .wrap{position:relative}
     .social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
-    .social-links .button{border-color:rgba(204,194,245,.45);color:#ccc2f5}
+    .social-links .button{gap:10px;border-color:rgba(204,194,245,.45);color:#ccc2f5}
     .social-links .button:hover{background:#e75995;border-color:#e75995;color:#151528}
+    .social-icon{width:17px;height:17px;flex:none;display:block;fill:currentColor}
+    .social-icon.instagram{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     footer .footer-socials{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
-    footer .footer-socials a{color:#ccc2f5;transition:color .2s}
+    footer .footer-socials a{display:inline-flex;align-items:center;gap:7px;color:#ccc2f5;transition:color .2s}
     footer .footer-socials a:hover{color:#e75995}
+    footer .social-icon{width:15px;height:15px}
     .community h2{font-size:clamp(54px,9vw,112px);max-width:900px;margin:0 auto 24px}
     .community p{max-width:520px;margin:0 auto;color:#c6b9c1;font-size:13px;line-height:1.9}
     footer{padding:32px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#ccc2f5;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
@@ -133,15 +136,15 @@
     <section class="community" id="community">
       <div class="wrap reveal"><div class="kicker">GTA6ITALIA</div><h2>La community<br>vive qui.</h2><p>Questo è il punto di ritrovo italiano per gli appassionati di Grand Theft Auto VI. Preparati a esplorare Leonida.</p>
         <div class="social-links">
-          <a class="button" href="https://www.facebook.com/groups/gta6italia/" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a class="button" href="https://www.instagram.com/gta6_italia/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a class="button" href="https://www.youtube.com/@gta6italia" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a class="button" href="https://www.facebook.com/groups/gta6italia/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4z"/></svg><span>Facebook</span></a>
+          <a class="button" href="https://www.instagram.com/gta6_italia/" target="_blank" rel="noopener noreferrer"><svg class="social-icon instagram" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+          <a class="button" href="https://www.youtube.com/@gta6italia" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg><span>YouTube</span></a>
         </div>
         <a class="button primary" href="#inizio" style="margin-top:24px">Torna all'inizio</a></div>
     </section>
   </main>
 
-  <footer><img src="https://raw.githubusercontent.com/JonaDev2026/GTA6_Italia/main/logo.png" alt="GTA6ITALIA"><div class="footer-socials"><a href="https://www.facebook.com/groups/gta6italia/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/gta6_italia/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.youtube.com/@gta6italia" target="_blank" rel="noopener noreferrer">YouTube</a></div><span>Community non ufficiale · Fan site</span><span>© GTA6ITALIA</span></footer>
+  <footer><img src="https://raw.githubusercontent.com/JonaDev2026/GTA6_Italia/main/logo.png" alt="GTA6ITALIA"><div class="footer-socials"><a href="https://www.facebook.com/groups/gta6italia/" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4z"/></svg><span>Facebook</span></a><a href="https://www.instagram.com/gta6_italia/" target="_blank" rel="noopener noreferrer"><svg class="social-icon instagram" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.youtube.com/@gta6italia" target="_blank" rel="noopener noreferrer"><svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg><span>YouTube</span></a></div><span>Community non ufficiale · Fan site</span><span>© GTA6ITALIA</span></footer>
   <script>
     const menu = document.getElementById('menu');
     const nav = document.getElementById('nav');
