@@ -6,28 +6,26 @@
   <meta name="theme-color" content="#09090b">
   <meta name="description" content="GTA6ITALIA — community italiana dedicata a Grand Theft Auto VI.">
   <title>GTA6ITALIA — Benvenuti a Leonida</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../ArtDeco_2026/stylesheet.css">
   <style>
     :root{--ink:#09090b;--paper:#f5f0e9;--pink:#ff70a6;--orange:#ff9b59;--muted:#aaa5a5;--line:rgba(255,255,255,.15);--wide:1280px}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--ink);color:var(--paper);font-family:"DM Sans",sans-serif}
+    body{margin:0;background:var(--ink);color:var(--paper);font-family:"GTAArtDeco",Arial,sans-serif}
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
     .topbar{height:78px;position:absolute;z-index:5;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,76px);border-bottom:1px solid var(--line);background:linear-gradient(#08080acc,transparent)}
     .brand img{width:148px;max-height:54px;object-fit:contain}
     .nav{display:flex;align-items:center;gap:clamp(18px,3vw,42px);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
     .nav a{opacity:.82;transition:color .2s,opacity .2s}.nav a:hover{color:var(--pink);opacity:1}
-    .menu{display:none;border:1px solid var(--line);background:#111;color:white;padding:10px 13px;font:700 11px "DM Sans";letter-spacing:.12em}
+    .menu{display:none;border:1px solid var(--line);background:#111;color:white;padding:10px 13px;font:700 11px "GTAArtDeco";letter-spacing:.12em}
     .hero{min-height:min(900px,100svh);height:850px;max-height:1000px;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:#191316 url("../wallpaper.png") center 38%/cover no-repeat}
     .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,8,.72),rgba(5,5,8,.12) 72%),linear-gradient(0deg,#09090b 0%,transparent 58%),linear-gradient(180deg,rgba(0,0,0,.38),transparent 34%)}
     .hero-content{position:relative;width:min(var(--wide),100%);margin:0 auto;padding:150px 34px 105px}
     .eyebrow{display:flex;align-items:center;gap:12px;color:#ffd2df;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
     .eyebrow:before{content:"";width:34px;height:1px;background:var(--pink)}
     h1,h2,h3,p{margin-top:0}
-    h1{font:900 clamp(76px,13vw,174px)/.78 "Barlow Condensed",sans-serif;letter-spacing:-.045em;text-transform:uppercase;margin:28px 0 24px;max-width:850px;text-shadow:0 8px 45px #0008}
+    h1{font:900 clamp(76px,13vw,174px)/.78 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.045em;text-transform:uppercase;margin:28px 0 24px;max-width:850px;text-shadow:0 8px 45px #0008}
     h1 span{display:block;color:var(--pink);font-size:.56em;letter-spacing:.02em;margin-top:16px}
     .hero-copy{max-width:470px;color:#e0d9d7;font-size:14px;line-height:1.8}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
@@ -38,12 +36,12 @@
     .wrap{width:min(var(--wide),100%);margin:auto}
     .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
     .kicker{color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
-    h2{font:800 clamp(44px,7vw,82px)/.9 "Barlow Condensed",sans-serif;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:0}
+    h2{font:900 clamp(44px,7vw,82px)/.9 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:0}
     .section-intro{max-width:390px;color:var(--muted);font-size:13px;line-height:1.8;margin:0}
     .feature{display:grid;grid-template-columns:1.1fr .9fr;min-height:510px;background:#121114}
     .feature-image{min-height:420px;background:url("../poster.png") center/cover no-repeat}
     .feature-copy{padding:clamp(30px,5vw,70px);display:flex;flex-direction:column;justify-content:center}
-    .feature-copy h3{font:800 clamp(42px,6vw,72px)/.9 "Barlow Condensed";text-transform:uppercase;margin:16px 0}
+    .feature-copy h3{font:900 clamp(42px,6vw,72px)/.9 "GTAArtDeco Condensed";text-transform:uppercase;margin:16px 0}
     .feature-copy p{color:var(--muted);font-size:13px;line-height:1.9;max-width:420px}
     .text-link{display:inline-flex;gap:14px;align-items:center;margin-top:18px;color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
     .text-link:after{content:"↗";font-size:16px}
@@ -53,7 +51,7 @@
     .shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1);filter:saturate(.88)}
     .shot:hover img{transform:scale(1.06);filter:saturate(1.1)}
     .shot:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#0008);pointer-events:none}
-    .shot span{position:absolute;z-index:1;left:18px;bottom:16px;font:700 22px "Barlow Condensed";text-transform:uppercase}
+    .shot span{position:absolute;z-index:1;left:18px;bottom:16px;font:700 22px "GTAArtDeco Condensed";text-transform:uppercase}
     .community{position:relative;overflow:hidden;padding:120px 24px;text-align:center;background:linear-gradient(110deg,#26131e,#151019 55%,#1d1422)}
     .community:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:#f35b9b20;filter:blur(100px);top:-350px;left:calc(50% - 300px)}
     .community .wrap{position:relative}
@@ -111,6 +109,8 @@
           <a class="shot reveal" href="../poster7.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster7.png" alt="Artwork GTA VI 6"><span>Atmosfere</span></a>
           <a class="shot reveal" href="../poster8.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster8.png" alt="Artwork GTA VI 7"><span>Florida</span></a>
           <a class="shot reveal" href="../poster9.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster9.png" alt="Artwork GTA VI 8"><span>GTA VI</span></a>
+          <a class="shot reveal" href="../poster10.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster10.png" alt="Artwork GTA VI 9"><span>Leonida by night</span></a>
+          <a class="shot reveal" href="../poster11.png" target="_blank" rel="noreferrer"><img loading="lazy" src="../poster11.png" alt="Artwork GTA VI 10"><span>Vice Stories</span></a>
         </div>
       </div>
     </section>
