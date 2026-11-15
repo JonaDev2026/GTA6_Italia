@@ -62,6 +62,12 @@
     .community{position:relative;overflow:hidden;padding:120px 24px;text-align:center;background:linear-gradient(110deg,#26131e,#151019 55%,#1d1422)}
     .community:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:#f35b9b20;filter:blur(100px);top:-350px;left:calc(50% - 300px)}
     .community .wrap{position:relative}
+    .social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .social-links .button{border-color:rgba(204,194,245,.45);color:#ccc2f5}
+    .social-links .button:hover{background:#e75995;border-color:#e75995;color:#151528}
+    footer .footer-socials{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+    footer .footer-socials a{color:#ccc2f5;transition:color .2s}
+    footer .footer-socials a:hover{color:#e75995}
     .community h2{font-size:clamp(54px,9vw,112px);max-width:900px;margin:0 auto 24px}
     .community p{max-width:520px;margin:0 auto;color:#c6b9c1;font-size:13px;line-height:1.9}
     footer{padding:32px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:#ccc2f5;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
@@ -125,11 +131,17 @@
     </section>
 
     <section class="community" id="community">
-      <div class="wrap reveal"><div class="kicker">GTA6ITALIA</div><h2>La community<br>vive qui.</h2><p>Questo è il punto di ritrovo italiano per gli appassionati di Grand Theft Auto VI. Preparati a esplorare Leonida.</p><a class="button primary" href="#inizio" style="margin-top:30px">Torna all'inizio</a></div>
+      <div class="wrap reveal"><div class="kicker">GTA6ITALIA</div><h2>La community<br>vive qui.</h2><p>Questo è il punto di ritrovo italiano per gli appassionati di Grand Theft Auto VI. Preparati a esplorare Leonida.</p>
+        <div class="social-links">
+          <a class="button" href="https://www.facebook.com/groups/gta6italia/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="button" href="https://www.instagram.com/gta6_italia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="button" href="https://www.youtube.com/@gta6italia" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+        <a class="button primary" href="#inizio" style="margin-top:24px">Torna all'inizio</a></div>
     </section>
   </main>
 
-  <footer><img src="https://raw.githubusercontent.com/JonaDev2026/GTA6_Italia/main/logo.png" alt="GTA6ITALIA"><span>Community non ufficiale · Fan site</span><span>© GTA6ITALIA</span></footer>
+  <footer><img src="https://raw.githubusercontent.com/JonaDev2026/GTA6_Italia/main/logo.png" alt="GTA6ITALIA"><div class="footer-socials"><a href="https://www.facebook.com/groups/gta6italia/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/gta6_italia/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.youtube.com/@gta6italia" target="_blank" rel="noopener noreferrer">YouTube</a></div><span>Community non ufficiale · Fan site</span><span>© GTA6ITALIA</span></footer>
   <script>
     const menu = document.getElementById('menu');
     const nav = document.getElementById('nav');
