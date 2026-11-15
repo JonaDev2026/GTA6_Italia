@@ -37,11 +37,13 @@
     .text-link:after{content:"↗";font-size:16px}
     #posts .section-head h2{color:#d1ffcb}
     .posts{background:#151528}
-    .vice-talk{background:#1b1a30}
-    .vice-talk .section-head h2{color:#fff}
-    .vice-talk-player{width:min(100%,980px);margin:0 auto;background:#21213c;border:1px solid #ffffff18;border-radius:14px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 24px 70px #0005}
-    .vice-talk-player iframe{display:block;width:100%;height:100%;border:0}
-    .vice-talk-link{display:flex;width:max-content;margin:24px auto 0}
+    .vice-talk{background:var(--ink)}
+    .vice-talk-feature{display:grid;grid-template-columns:.9fr 1.1fr;min-height:510px;background:#21213c}
+    .vice-talk-copy{padding:clamp(30px,5vw,70px);display:flex;flex-direction:column;justify-content:center}
+    .vice-talk-copy h3{font:900 clamp(42px,6vw,72px)/.9 "GTAArtDeco Condensed";text-transform:uppercase;margin:16px 0;color:#fff}
+    .vice-talk-copy p{color:#fff;font-size:14px;line-height:1.9;max-width:420px}
+    .vice-talk-player{min-height:420px;overflow:hidden;background:#111}
+    .vice-talk-player iframe{display:block;width:100%;height:100%;min-height:420px;border:0}
     .posts-feed{width:min(780px,100%);margin:0 auto;display:grid;gap:24px}
     .post-card{overflow:hidden;background:#21213c;border:0;border-radius:14px}
     .post-head{display:flex;align-items:center;gap:13px;padding:19px 22px}
