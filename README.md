@@ -1,9 +1,7 @@
 # GTA 6 Repository Test
 
-## Maps
-![](collection_map_A.jpg)
-![](collection_map_B.jpg)
-![](map.jpeg)
+## social post example
+![](post_example.png)
 
 ## wallpapers
 ![](wallpapers/wallpapers-1.png)
@@ -28,3 +26,7 @@
 ![](poster8.png)
 ![](poster9.png)
 
+## Maps
+![](collection_map_A.jpg)
+![](collection_map_B.jpg)
+![](map.jpeg)
