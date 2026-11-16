@@ -126,4 +126,4 @@
 @media(max-width:760px){.nav{top:68px;height:calc(100dvh - 68px)}}
 
 
-@media(max-width:760px){.hero .eyebrow{font-size:16px}}
+@media(max-width:760px){.community{background-size:0% auto}.hero .eyebrow{font-size:16px}}
