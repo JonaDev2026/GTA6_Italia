@@ -49,7 +49,7 @@
     .posts-carousel{width:min(780px,100%);margin:0 auto}
     .posts-feed{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;-ms-overflow-style:none}
     .posts-feed::-webkit-scrollbar{display:none}
-    .post-card{display:flex;flex-direction:column;flex:0 0 100%;min-width:0;overflow:hidden;scroll-snap-align:start;scroll-snap-stop:always;background:#21213c;border:0;border-radius:14px}
+    .post-card{display:flex;flex-direction:column;flex:0 0 100%;min-width:0;overflow:hidden;scroll-snap-align:start;scroll-snap-stop:always;background:linear-gradient(to top,#202039 0%,#262745 100%);border:0;border-radius:14px}
     .posts-dots{display:flex;justify-content:center;align-items:center;gap:10px;padding-top:22px}
     .posts-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#77738c;opacity:.65;cursor:pointer;transition:width .2s,background .2s,opacity .2s}
     .posts-dot.active{width:22px;border-radius:8px;background:var(--pink);opacity:1}
