@@ -122,7 +122,7 @@
 /* Menu hamburger attivo su desktop e mobile */
 .topbar:has(.menu[aria-expanded="true"]){z-index:22;background:transparent;border-bottom-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
 .menu[aria-expanded="true"]{position:fixed;top:18px;right:calc(clamp(20px,5vw,76px) - 4px);z-index:30;color:#adb5ff;background:#2f2e52;border-radius:50%}
-.menu .menu-label{display:none}.menu[aria-expanded="true"] .menu-label{display:block;position:absolute;right:calc(100% + 14px);top:50%;transform:translateY(-50%);white-space:nowrap;font-family:Arial,sans-serif;font-size:17px;font-weight:500;line-height:1.2;letter-spacing:0;color:#fff;background:transparent}.menu[aria-expanded="true"]:hover{background:rgba(47,46,82,.4)}
+.menu .menu-label{display:none}.menu[aria-expanded="true"] .menu-label{display:block;position:absolute;left:calc(100% + 14px);right:auto;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:Arial,sans-serif;font-size:17px;font-weight:500;line-height:1.2;letter-spacing:0;color:#d9d1f6;background:transparent}.menu[aria-expanded="true"]:hover{background:rgba(47,46,82,.4)}
 .menu{display:flex}
 .menu:not([aria-expanded="true"]){gap:4px;right:-4px}
 .menu:not([aria-expanded="true"])>span:not(.menu-label){height:5px;border-radius:0;transform:translateX(4px)}
