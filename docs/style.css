@@ -113,3 +113,12 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.reveal{opacity:1;transform:none}}
 
     @media(max-width:760px){footer{padding:24px 16px;grid-template-columns:1fr;justify-items:center;gap:16px}.footer-brand,.footer-copyright{justify-self:center}.footer-links{gap:20px;flex-wrap:wrap}}
+
+
+/* Menu hamburger attivo su desktop e mobile */
+.menu{display:flex}
+.nav{position:fixed;z-index:21;top:78px;right:0;left:auto;width:min(90vw,480px);height:calc(100dvh - 78px);padding:32px 26px;background:#18182d;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:8px;border-left:1px solid rgba(255,255,255,.12);border-bottom:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .35s ease,visibility .35s}
+.nav.open{transform:translateX(0);visibility:visible;pointer-events:auto}
+.nav a{font-family:"GTAArtDeco Condensed",Arial,sans-serif;font-size:44px;font-weight:700;letter-spacing:normal;color:#ccc2f5;opacity:1}
+.nav a:hover{color:var(--pink);opacity:1}
+@media(max-width:760px){.nav{top:68px;height:calc(100dvh - 68px)}}
