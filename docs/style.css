@@ -41,6 +41,8 @@
     .text-link:after{content:"↗";font-size:14px}
     #posts .section-head .kicker{color:var(--orange)}
     #posts .section-head h2{color:#ffa2ce}
+    #posts .section-head{flex-direction:column;align-items:center;text-align:center;gap:14px}
+    #posts .section-intro{max-width:620px;text-align:center}
     .posts{background:#151528}
     .vice-talk{background:#71426c}
     .vice-talk .feature{grid-template-columns:.9fr 1.1fr;background:#794978}
