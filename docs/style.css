@@ -20,8 +20,8 @@
     .eyebrow{display:flex;align-items:center;gap:12px;color:#ffd2df;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
     .eyebrow:before{content:"";width:34px;height:1px;background:var(--pink)}
     h1,h2,h3,p{margin-top:0}
-    h1{font:900 clamp(76px,13vw,174px)/.78 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.045em;text-transform:uppercase;margin:28px 0 24px;max-width:850px;text-shadow:0 8px 45px #0008}
-    h1 span{display:block;color:var(--pink);font-size:.56em;letter-spacing:.02em;margin-top:16px}
+    h1{font:900 clamp(76px,13vw,174px)/.78 "GTAArtDeco Condensed",sans-serif;text-transform:uppercase;margin:28px 0 24px;max-width:850px;text-shadow:0 8px 45px #0008}
+    h1 span{display:block;color:var(--pink);font-size:.56em;margin-top:16px}
     .hero-copy{max-width:470px;color:#e0d9d7;font-size:14px;line-height:1.8}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
     .button{display:inline-flex;align-items:center;justify-content:center;min-height:0;padding:10px 14px;border:1px solid #ffb2c6;border-radius:999px;background:#ffb2c6;color:#151528;font-family:"GTAArtDeco",Arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:normal;text-transform:none;transition:.2s}
@@ -31,7 +31,7 @@
     .wrap{width:min(var(--wide),100%);margin:auto}
     .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
     .kicker{color:#f090b9;font-size:17px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
-    h2{font:900 clamp(44px,7vw,82px)/.9 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:0;color:#fff9cb}
+    h2{font:900 clamp(44px,7vw,82px)/.9 "GTAArtDeco Condensed",sans-serif;text-transform:uppercase;margin-bottom:0;color:#fff9cb}
     .universe-link{display:inline-block;margin-bottom:12px;transition:color .2s}
     .universe-link:hover{color:#ffdf80}
     h2.universe-title{font:900 clamp(44px,7vw,82px)/.98 "GTAArtDeco",Arial,sans-serif;letter-spacing:-.045em;color:#f7f5f5}
@@ -98,7 +98,7 @@
     .footer-link:hover{color:#f77e9c}
     .footer-copyright{justify-self:end;font-size:14px;letter-spacing:normal;text-transform:none!important;white-space:nowrap;color:#ccc2f5}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:760px){.topbar{height:68px;background:#18182d}.brand img{width:50px}.menu{display:flex;position:relative;z-index:22}.nav{display:flex;position:fixed;z-index:21;top:68px;right:0;left:auto;width:min(82vw,360px);height:calc(100dvh - 68px);padding:32px 26px;background:#18182d;flex-direction:column;align-items:flex-start;gap:28px;border-left:1px solid rgba(255,255,255,.12);border-bottom:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .35s ease,visibility .35s}.nav.open{transform:translateX(0);visibility:visible;pointer-events:auto}.nav a{font-family:"GTAArtDeco Condensed",Arial,sans-serif;font-size:30px;font-weight:700;letter-spacing:.12em;color:#ccc2f5}.hero{height:780px;min-height:760px;background-position:58% center}.hero-content{padding:130px 24px 100px}.hero:before{background:linear-gradient(90deg,#050508b8,transparent),linear-gradient(0deg,#09090b,transparent 70%)}.section{padding:78px 20px}.section-head{display:block}.section-intro{margin-top:20px}.feature{grid-template-columns:1fr}.feature-image{min-height:330px}.vice-talk-player{min-height:330px}.vice-talk-player iframe{min-height:330px}.vice-talk .feature{grid-template-columns:1fr}.vice-talk-player{min-height:0;aspect-ratio:16/9}.vice-talk-player iframe{min-height:0}.posts-feed{gap:16px}.post-head{padding:16px}.post-body{padding:18px}.post-footer{padding:13px 18px}.community{padding:90px 22px}footer{flex-direction:column;text-align:center}}
+    @media(max-width:760px){.topbar{height:68px;background:#18182d}.brand img{width:50px}.menu{display:flex;position:relative;z-index:22}.nav{display:flex;position:fixed;z-index:21;top:68px;right:0;left:auto;width:min(82vw,360px);height:calc(100dvh - 68px);padding:32px 26px;background:#18182d;flex-direction:column;align-items:flex-start;gap:28px;border-left:1px solid rgba(255,255,255,.12);border-bottom:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .35s ease,visibility .35s}.nav.open{transform:translateX(0);visibility:visible;pointer-events:auto}.nav a{font-family:"GTAArtDeco Condensed",Arial,sans-serif;font-size:30px;font-weight:700;letter-spacing:normal;color:#ccc2f5}.hero{height:780px;min-height:760px;background-position:58% center}.hero-content{padding:130px 24px 100px}.hero:before{background:linear-gradient(90deg,#050508b8,transparent),linear-gradient(0deg,#09090b,transparent 70%)}.section{padding:78px 20px}.section-head{display:block}.section-intro{margin-top:20px}.feature{grid-template-columns:1fr}.feature-image{min-height:330px}.vice-talk-player{min-height:330px}.vice-talk-player iframe{min-height:330px}.vice-talk .feature{grid-template-columns:1fr}.vice-talk-player{min-height:0;aspect-ratio:16/9}.vice-talk-player iframe{min-height:0}.posts-feed{gap:16px}.post-head{padding:16px}.post-body{padding:18px}.post-footer{padding:13px 18px}.community{padding:90px 22px}footer{flex-direction:column;text-align:center}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.reveal{opacity:1;transform:none}}
 
     @media(max-width:760px){footer{padding:24px 16px;grid-template-columns:1fr;justify-items:center;gap:16px}.footer-brand,.footer-copyright{justify-self:center}.footer-links{gap:20px;flex-wrap:wrap}}
