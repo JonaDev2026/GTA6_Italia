@@ -215,7 +215,7 @@ if (postsFeed && dotsWrap) {
     let lastError;
     for (let attempt = 0; attempt < 3; attempt++) {
       try {
-        const posts = await readPosts('https://igtrackr.com/api/profile/gta6_italia/export?format=json');
+        const posts = await readPosts('posts.json');
         renderPosts(posts);
         return;
       } catch (error) {
