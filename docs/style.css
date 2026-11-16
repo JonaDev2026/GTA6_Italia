@@ -21,7 +21,7 @@
     .eyebrow:before{content:"";width:34px;height:1px;background:var(--pink)}
     h1,h2,h3,p{margin-top:0}
     h1{font:900 clamp(76px,13vw,174px)/.78 "GTAArtDeco Condensed",sans-serif;text-transform:uppercase;margin:28px 0 24px;max-width:850px;text-shadow:0 8px 45px #0008}
-    h1 span{display:block;color:var(--pink);font-size:.56em;margin-top:16px}
+    h1 span{display:block;color:#f486b4;font-size:.56em;margin-top:16px}
     .hero-copy{max-width:470px;color:#e0d9d7;font-size:14px;line-height:1.8}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
     .button{display:inline-flex;align-items:center;justify-content:center;min-height:0;padding:10px 14px;border:1px solid #ffb2c6;border-radius:999px;background:#ffb2c6;color:#151528;font-family:"GTAArtDeco",Arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:normal;text-transform:none;transition:.2s}
