@@ -23,6 +23,7 @@ jobs:
         id: update
         env:
           FEED_URL: https://igtrackr.com/api/profile/gta6_italia/export?format=json
+          IGTRACKR_AUTH: ${{ secrets.IGTRACKR_AUTH }}
         run: |
           python - <<'PY'
           import json
@@ -34,7 +35,12 @@ jobs:
           target = Path("docs/posts.json")
           request = urllib.request.Request(
               os.environ["FEED_URL"],
-              headers={"User-Agent": "GTA6-Italia-Feed-Updater/1.0", "Accept": "application/json"}
+              headers={
+                  "User-Agent": "Mozilla/5.0",
+                  "Accept": "application/json",
+                  "Cookie": "__Secure-igt.session_token=" + os.environ["IGTRACKR_AUTH"],
+                  "Referer": "https://igtrackr.com/",
+              }
           )
           with urllib.request.urlopen(request, timeout=30) as response:
               if response.status != 200:
