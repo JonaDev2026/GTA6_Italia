@@ -129,7 +129,7 @@
 .nav.open{transform:translateX(0);visibility:visible;pointer-events:auto}
 .nav a{font-family:"GTAArtDeco Condensed",Arial,sans-serif;font-size:46px;font-weight:700;line-height:.82;letter-spacing:0;color:#ccc2f5;opacity:1}
 .nav a:hover{color:#fff;opacity:1;transition:color .15s ease-in-out}
-@media(max-width:760px){.nav{top:0;height:100dvh}}
+@media(max-width:760px){.nav{top:0;height:100dvh}.nav a{line-height:1.1}}
 
 
 @media(max-width:760px){.community{background-size:0% auto}.hero .eyebrow{font-size:16px}}
