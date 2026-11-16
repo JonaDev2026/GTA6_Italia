@@ -25,7 +25,7 @@
     .section{padding:110px 24px}
     .wrap{width:min(var(--wide),100%);margin:auto}
     .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
-    .kicker{color:var(--pink);font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
+    .kicker{color:#f090b9;font-size:17px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
     h2{font:900 clamp(44px,7vw,82px)/.9 "GTAArtDeco Condensed",sans-serif;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:0;color:#fff9cb}
     .universe-link{display:inline-block;margin-bottom:12px;transition:color .2s}
     .universe-link:hover{color:#ffdf80}
