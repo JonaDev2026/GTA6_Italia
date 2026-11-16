@@ -123,7 +123,7 @@
 .topbar:has(.menu[aria-expanded="true"]){z-index:22;background:transparent;border-bottom-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
 .menu[aria-expanded="true"]{position:fixed;top:18px;right:clamp(20px,5vw,76px);z-index:30;color:#adb5ff;background:#2f2e52;border-radius:50%}.menu[aria-expanded="true"]:hover{background:rgba(47,46,82,.4)}
 .menu{display:flex}
-.menu:not([aria-expanded="true"]) span{transform:translateX(4px)}
+.menu:not([aria-expanded="true"]) span{height:5px;border-radius:0;transform:translateX(4px)}
 .nav{position:fixed;z-index:21;top:0;right:0;left:auto;width:min(90vw,380px);height:100dvh;padding:110px 52px 32px;background:linear-gradient(189deg,#1f1f38 0.55%,#18182d 30.38%,#111222 65.19%,#0c0d1b 100%);flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;letter-spacing:0;border-left:1px solid rgba(255,255,255,.12);border-bottom:0;transform:translateX(100%);visibility:hidden;pointer-events:none;transition:transform .35s ease,visibility .35s}
 .nav.open{transform:translateX(0);visibility:visible;pointer-events:auto}
 .nav a{font-family:"GTAArtDeco Condensed",Arial,sans-serif;font-size:46px;font-weight:700;line-height:1.2;letter-spacing:0;color:#ccc2f5;opacity:1}
