@@ -1,0 +1,85 @@
+name: Aggiorna feed Instagram
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram-feed-update
+  cancel-in-progress: false
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Controlla nuovi post e aggiorna il JSON
+        id: update
+        env:
+          FEED_URL: https://igtrackr.com/api/profile/gta6_italia/export?format=json
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          import urllib.request
+          from pathlib import Path
+
+          target = Path("docs/posts.json")
+          request = urllib.request.Request(
+              os.environ["FEED_URL"],
+              headers={"User-Agent": "GTA6-Italia-Feed-Updater/1.0", "Accept": "application/json"}
+          )
+          with urllib.request.urlopen(request, timeout=30) as response:
+              if response.status != 200:
+                  raise RuntimeError(f"Feed HTTP {response.status}")
+              remote = json.load(response)
+
+          posts = remote.get("posts") if isinstance(remote, dict) else None
+          if not isinstance(posts, list) or not posts:
+              raise RuntimeError("Feed vuoto o formato JSON non valido")
+
+          remote_codes = {str(p.get("code")) for p in posts if isinstance(p, dict) and p.get("code")}
+          if not remote_codes:
+              raise RuntimeError("Il feed non contiene codici post validi")
+
+          try:
+              current = json.loads(target.read_text(encoding="utf-8"))
+              current_posts = current.get("posts", [])
+              current_codes = {
+                  str(p.get("code")) for p in current_posts
+                  if isinstance(p, dict) and p.get("code")
+              }
+          except Exception as exc:
+              raise RuntimeError(f"JSON locale esistente non leggibile: {exc}")
+
+          new_codes = remote_codes - current_codes
+          if not new_codes:
+              print("Nessun nuovo post: docs/posts.json resta invariato.")
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+                  out.write("changed=false\n")
+              sys.exit(0)
+
+          target.write_text(
+              json.dumps(remote, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+          print(f"Nuovi post rilevati: {len(new_codes)}. JSON aggiornato.")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write("changed=true\n")
+          PY
+
+      - name: Pubblica il JSON aggiornato
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/posts.json
+          git commit -m "Aggiorna feed Instagram"
+          git push
