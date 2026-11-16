@@ -65,6 +65,7 @@
     .post-body p{color:#fff;font-size:14px;line-height:1.8;margin:0}
     .post-footer{display:flex;gap:12px;align-items:center;padding:14px 24px;border-top:1px solid #ffffff12;color:#a49ba2;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
     .post-footer span:first-child{color:var(--pink)}
+    .post-footer span:last-child{color:#ccc2f5}
     .community{position:relative;overflow:hidden;padding:120px 24px;text-align:center;background:linear-gradient(110deg,#26131e,#151019 55%,#1d1422)}
     .community:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:#f35b9b20;filter:blur(100px);top:-350px;left:calc(50% - 300px)}
     .community .wrap{position:relative}
