@@ -137,7 +137,7 @@ function renderPosts(posts) {
     .filter(post => post && post.code && post.thumbnail_url && post.caption_text)
     .sort((a, b) => new Date(b.taken_at).getTime() - new Date(a.taken_at).getTime());
 
-  if (!validPosts.length) return;
+  if (!validPosts.length) throw new Error('Nessun post disponibile');
 
   const fragment = document.createDocumentFragment();
   validPosts.forEach(post => fragment.appendChild(makePostCard(post)));
@@ -199,21 +199,31 @@ if (postsFeed && dotsWrap) {
     else startAutoplay();
   });
 
+  function showPostsUnavailable() {
+    stopAutoplay();
+    postCards = [];
+    postDots = [];
+    postsFeed.replaceChildren();
+    dotsWrap.replaceChildren();
+    const message = document.createElement('p');
+    message.className = 'posts-status';
+    message.textContent = 'Servizio non disponibile. Ricarica il sito.';
+    postsFeed.appendChild(message);
+  }
+
   (async () => {
-    try {
-      const posts = await readPosts('https://igtrackr.com/api/profile/gta6_italia/export?format=json');
-      renderPosts(posts);
-    } catch (error) {
+    let lastError;
+    for (let attempt = 0; attempt < 3; attempt++) {
       try {
-        const posts = await readPosts('posts.json');
+        const posts = await readPosts('https://igtrackr.com/api/profile/gta6_italia/export?format=json');
         renderPosts(posts);
-      } catch (fallbackError) {
-        postCards = [...postsFeed.querySelectorAll('.post-card')];
-        postDots = [...dotsWrap.querySelectorAll('.posts-dot')];
-        setActivePost();
-        startAutoplay();
-        console.error('Feed Instagram non disponibile:', fallbackError);
+        return;
+      } catch (error) {
+        lastError = error;
+        if (attempt < 2) await new Promise(resolve => window.setTimeout(resolve, (attempt + 1) * 1000));
       }
     }
+    showPostsUnavailable();
+    console.error('Feed Instagram non disponibile:', lastError);
   })();
 }
