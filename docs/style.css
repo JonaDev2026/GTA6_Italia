@@ -85,12 +85,15 @@
     .community h2{font-size:clamp(36px,4.5vw,56px);max-width:900px;margin:0 auto 24px;background:radial-gradient(62.79% 100% at 50% 0%, #ffdf80 0%, #f4717c 50%, #e963c7 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
     .community p{max-width:520px;margin:0 auto;color:#fff;font-size:14px;line-height:1.9}.community .community-note{margin:28px auto 0;color:#aaa5a5;font-size:10px;line-height:1.6;letter-spacing:.08em}
     .community .community-subtitle{max-width:none;margin:12px auto 0;color:#aaa5a5;font-size:14px;line-height:1.5;letter-spacing:normal}
-    footer{padding:28px 24px;background:transparent;border-top:0;display:flex;justify-content:space-between;align-items:center;gap:24px;color:#fff;font-size:14px;letter-spacing:normal;text-transform:none}
-    .footer-link{color:#ccc2f5;font-size:14px;letter-spacing:normal;text-transform:none;transition:color .2s}
+    footer{padding:28px 24px;background:transparent;border-top:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;color:#fff;font-size:14px;letter-spacing:normal;text-transform:none}
+    .footer-brand{justify-self:start;display:inline-flex;align-items:center}
+    .footer-brand img{width:148px;max-height:54px;object-fit:contain}
+    .footer-links{display:flex;align-items:center;justify-content:center;gap:24px}
+    .footer-link{color:#ccc2f5;font-size:14px;letter-spacing:normal;text-transform:none;white-space:nowrap;transition:color .2s}
     .footer-link:hover{color:#f77e9c}
-    .footer-copyright{font-size:14px;letter-spacing:normal;text-transform:none}
+    .footer-copyright{justify-self:end;font-size:14px;letter-spacing:normal;text-transform:none;white-space:nowrap}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
     @media(max-width:760px){.topbar{height:68px}.brand img{width:120px}.menu{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;padding:22px;background:#09090bf5;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav.open{display:flex}.hero{height:780px;min-height:760px;background-position:58% center}.hero-content{padding:130px 24px 100px}.hero:before{background:linear-gradient(90deg,#050508b8,transparent),linear-gradient(0deg,#09090b,transparent 70%)}.section{padding:78px 20px}.section-head{display:block}.section-intro{margin-top:20px}.feature{grid-template-columns:1fr}.feature-image{min-height:330px}.vice-talk-player{min-height:330px}.vice-talk-player iframe{min-height:330px}.vice-talk .feature{grid-template-columns:1fr}.vice-talk-player{min-height:0;aspect-ratio:16/9}.vice-talk-player iframe{min-height:0}.posts-feed{gap:16px}.post-head{padding:16px}.post-body{padding:18px}.post-footer{padding:13px 18px}.community{padding:90px 22px}footer{flex-direction:column;text-align:center}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.reveal{opacity:1;transform:none}}
 
-    @media(max-width:760px){footer{padding:24px 16px;gap:14px;flex-wrap:wrap}.footer-copyright{order:3;width:100%;text-align:center}}
+    @media(max-width:760px){footer{padding:24px 16px;grid-template-columns:1fr;justify-items:center;gap:16px}.footer-brand,.footer-copyright{justify-self:center}.footer-links{gap:20px;flex-wrap:wrap}}
