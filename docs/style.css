@@ -65,7 +65,7 @@
     .post-body{padding:22px 24px 24px}
     .post-body h3{font:900 clamp(26px,4vw,38px)/.95 "GTAArtDeco Condensed";text-transform:uppercase;margin:0 0 10px}
     .post-body p{color:#fff;font-size:14px;line-height:1.8;margin:0}
-    .post-footer{display:flex;gap:12px;align-items:center;padding:14px 24px;border-top:0;color:#a49ba2;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .post-footer{display:flex;gap:12px;align-items:center;padding:14px 24px;border-top:0;color:#a49ba2;font-size:14px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
     .post-footer span:first-child{color:var(--pink)}
     .post-footer span:last-child{color:#ccc2f5}
     .community{position:relative;overflow:hidden;padding:120px 24px;text-align:center;background:linear-gradient(110deg,#26131e,#151019 55%,#1d1422)}
