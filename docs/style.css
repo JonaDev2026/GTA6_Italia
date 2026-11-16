@@ -79,7 +79,7 @@
     .vice-talk .vice-twitch-link{color:#c98ef2}
     .social-icon{width:15px;height:15px;flex:none;display:inline-flex;align-items:center;justify-content:center;font-size:15px;line-height:1}
     footer .footer-socials{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
-    footer .footer-socials a{display:inline-flex;align-items:center;gap:7px;padding:10px 13px;border-radius:6px;background:#2f2e52;color:#ccc2f5;transition:background .2s,color .2s}
+    footer .footer-socials a{display:inline-flex;align-items:center;gap:6px;padding:10px 13px;border-radius:6px;background:#2f2e52;color:#ccc2f5;transition:background .2s,color .2s}
     footer .footer-socials a:hover{background:#e75995;color:#151528}
     footer .social-icon{width:15px;height:15px;font-size:15px}
     .community h2{font-size:clamp(36px,4.5vw,56px);max-width:900px;margin:0 auto 24px;background:radial-gradient(62.79% 100% at 50% 0%, #ffdf80 0%, #f4717c 50%, #e963c7 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
