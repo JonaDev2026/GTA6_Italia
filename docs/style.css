@@ -49,7 +49,7 @@
     #posts .section-head{flex-direction:column;align-items:center;text-align:center;gap:14px}
     #posts .section-intro{max-width:620px;text-align:center}
     .posts{background:#151528}
-    .spotify-section{background:#151528}
+    .spotify-section{background:linear-gradient(rgba(21,21,40,.78),rgba(21,21,40,.78)),url("img/Hero_BG.0p057ifb~cbkz.jpg") center/cover no-repeat}
     .spotify-heading{justify-content:center;text-align:center;margin-bottom:36px}
     .spotify-heading>div{display:flex;flex-direction:column;align-items:center;gap:16px}
     .spotify-heading h2{background:radial-gradient(125% 225% at 50% 0%,#9fa 0%,#89f5e3 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
