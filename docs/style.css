@@ -122,3 +122,6 @@
 .nav a{font-family:"GTAArtDeco Condensed",Arial,sans-serif;font-size:44px;font-weight:700;letter-spacing:normal;color:#ccc2f5;opacity:1}
 .nav a:hover{color:var(--pink);opacity:1}
 @media(max-width:760px){.nav{top:68px;height:calc(100dvh - 68px)}}
+
+
+@media(max-width:760px){.hero .eyebrow{font-size:16px}}
