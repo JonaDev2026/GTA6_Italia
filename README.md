@@ -1,6 +1,7 @@
 # GTA 6 Repository Test
 
 ## post examples
+![](welcome.png)
 ![](lastpost.png)
 ![](vicetalk_post.png)
 ![](post_example.png)
