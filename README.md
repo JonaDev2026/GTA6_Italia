@@ -16,6 +16,9 @@
 ![](poster11.png)
 
 ## Social Covers
+![](youtube/yt_cover4-b.png)
+![](youtube/yt_cover2-b.png)
+![](youtube/yt_cover3-b.png)
 ![](youtube/yt_cover4.png)
 ![](youtube/yt_cover2.png)
 ![](youtube/yt_cover3.png)
